@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+{% block contenido %}
+
+<p>Estudiante: {{inscripcion.estudiante}}</p>
+<p>Curso: {{inscripcion.curso}}</p>
+<p>Fecha de inscripcion: {{inscripcion.fecha_inscripcion}}</p>
+
+
+
+<button><a href="{% url 'inscripcion_delete' pk=inscripcion.pk %}">Eliminar</a></button>
+<br>
+<br>
+<button><a href="{% url 'tabla_inscripciones' %}">Volver</a></button>
+
+{% endblock %}

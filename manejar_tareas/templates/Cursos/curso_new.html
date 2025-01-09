@@ -1,0 +1,10 @@
+{% extends 'index.html' %}
+{% block contenido %}
+
+<form action="" method="post">
+    {% csrf_token %}
+    {{form}}
+    <input type="submit" value="Agregar">
+</form>
+
+{% endblock %}

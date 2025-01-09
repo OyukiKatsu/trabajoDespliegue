@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+{% block contenido %}
+
+<p>Nombre: {{curso.nombre}}</p>
+<p>Codigo: {{curso.codigo}}</p>
+<p>Fecha de inicio: {{curso.fecha_inicio}}</p>
+<p>Fecha de finalizacion: {{curso.fecha_fin}}</p>
+
+
+<button><a href="{% url 'curso_edit' pk=curso.pk %}">Modificar</a></button>
+<button><a href="{% url 'curso_delete' pk=curso.pk %}">Eliminar</a></button>
+<br>
+<br>
+<button><a href="{% url 'tabla_cursos' %}">Volver</a></button>
+
+{% endblock %}

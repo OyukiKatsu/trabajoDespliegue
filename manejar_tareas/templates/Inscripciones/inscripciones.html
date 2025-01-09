@@ -1,0 +1,13 @@
+{% extends 'index.html' %}
+{% block contenido %}
+
+    {% for inscripcion in inscripciones %}
+        <li><a href="{% url 'inscripcion_detalles' pk=inscripcion.pk %}">{{inscripcion}}</a></li>
+
+        {% empty %}
+        <p>No hay ninguna inscripcion, agrege una pulsando el boton "Agregar"</p>
+
+    {% endfor %}
+    <br>
+    <button><a href="{% url 'inscripcion_new' %}">Agregar</a></button>
+{% endblock %}

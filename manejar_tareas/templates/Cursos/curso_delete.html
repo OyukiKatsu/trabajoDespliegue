@@ -1,0 +1,13 @@
+{% extends 'index.html' %}
+{% block contenido %}
+
+<h1>Se eliminara el curso, quiere continuar?</h1>
+<h3>Esta acción es irreversible</h3>
+
+<form action="" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Confirmar">
+</form>
+<button><a href="{% url 'tabla_cursos' %}">Volver</a></button>
+
+{% endblock %}

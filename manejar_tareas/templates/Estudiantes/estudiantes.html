@@ -1,0 +1,13 @@
+{% extends 'index.html' %}
+{% block contenido %}
+
+    {% for estudiante in estudiantes %}
+        <li><a href="{% url 'estudiante_detalles' pk=estudiante.pk %}">{{estudiante}}</a></li>
+
+        {% empty %}
+        <p>No hay ningun estudainte, agrege uno pulsando el boton "Agregar"</p>
+
+    {% endfor %}
+    <br>
+    <button><a href="{% url 'estudiante_new' %}">Agregar</a></button>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'index.html' %}
+{% block contenido %}
+
+    {% for curso in cursos %}
+        <li><a href="{% url 'curso_detalles' pk=curso.pk %}">{{curso}}</a></li>
+
+        {% empty %}
+        <p>No hay ningun curso, agrege uno pulsando el boton "Agregar"</p>
+
+    {% endfor %}
+    <br>
+    <button><a href="{% url 'curso_new' %}">Agregar</a></button>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'index.html' %}
+{% block contenido %}
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form}}
+        <input type="submit" value="Modificar">
+    </form>
+<button><a href="{% url 'tabla_cursos' %}">Volver</a></button>
+
+{% endblock %}
